@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fapoleon</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: black;
+			}
+			canvas {
+				padding-left: 0;
+				padding-right: 0;
+				margin-top:10px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				border: 2px solid white;
+			}
+			p {
+				margin:0;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="float:none; width: 300px; margin-left:auto; margin-right:auto">
+			<p>Choose difficulty.:</p>
+			<button value="1">Easy</button>
+			<button value="2">Medium</button>
+			<button value="3">Hard</button>
+			<p>Smash A and D button to pitonozás</p>
+		</div>
+		<canvas id="can" width="854px" height="480px" ></canvas>
+		<script src="jquery-3.5.1.min.js"></script>
+		<script src="assets.js"></script>
+		<script src="game.js"></script>
+		<script src="keyhandler.js"></script>
+
+		<script src="main.js"></script>
+	</body>
+</html>
