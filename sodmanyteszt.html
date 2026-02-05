@@ -38,49 +38,48 @@ tw-story {
 /* --- Mobile layout with inventory support --- */
 @media (max-width: 768px) {
 
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
   tw-story {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 10.5em;  /* space for sidebar */
+    padding-top: 12em;  /* more space for taller sidebar */
   }
 
   tw-sidebar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-height: 11em;
-
-    margin: 0 !important;         /* kill any inherited margins */
-    padding: 0.25em 0.6em !important;  /* tight padding */
-
+    max-height: 3em;   /* taller sidebar */
+    margin-top: 0;
+    padding: 0.5em 0.75em;
     display: flex;
     flex-direction: column;
-    gap: 0.25em;
-
+    gap: 0.3em;
     text-align: left;
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid rgba(255,255,255,0.2);
-
-    overflow-y: auto;
+    overflow-y: auto;   /* 🔥 vertical scroll for long inventory */
     overflow-x: hidden;
-
-    z-index: 9999;
+    z-index: 100;
   }
 
-  /* Kill any hidden top spacing inside sidebar content */
-  tw-sidebar * {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  tw-sidebar > * {
+    font-size: 0.9em;
+    line-height: 1.3em;
   }
-}
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="775,0" size="100,100">&lt;img align=&quot;left&quot; src=&quot;https://sodipedia.sodika.dk/images/7/70/Barlang000.jpg&quot; alt=&quot;Sodmány Barlangjai&quot; hspace=&quot;20&quot;&gt;Kilépsz a bolt ajtaján és a céges autó felé veszed az irányt. Megigazítod kék simléderes sapkádat, előveszed a slusszkulcsot és bedobod a rendelést az anyósülésre. Igaz, hogy a műszak vége van és ez lesz ma az utolsó fuvarod, de mégis furcsa volt, ahogy az összes kollégádnak halaszthatatlan dolga akadt, amikor a főnök sápadt arccal bedobta ezt a dél-budai címet. Belenézel a szatyorba: fagyasztott pizzák, zacskós levesek, húskonzervek, tartós tej... egy átlagos legénylakás vagy valami egyetemista társbérlet lesz, semmi extra. Mitől ijedtek meg ezek ennyire?
+
+  tw-icon {
+    font-size: 32px;
+    padding-right: 0.25em;
+  }
+
+  /* Optional: visually separate inventory */
+  tw-sidebar b,
+  tw-sidebar strong {
+    display: inline-block;
+    margin-top: 0.3em;
+  }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="775,0" size="100,100">&lt;img align=&quot;left&quot; src=&quot;https://sodipedia.sodika.dk/images/7/70/Barlang000.jpg&quot; alt=&quot;Sodmány Barlangjai&quot; hspace=&quot;20&quot;&gt;Kilépsz a bolt ajtaján és a céges autó felé veszed az irányt. Megigazítod kék simléderes sapkádat, előveszed a slusszkulcsot és bedobod a rendelést az anyósülésre. Igaz, hogy a műszak vége van és ez lesz ma az utolsó fuvarod, de mégis furcsa volt, ahogy az összes kollégádnak halaszthatatlan dolga akadt, amikor a főnök sápadt arccal bedobta ezt a dél-budai címet. Belenézel a szatyorba: fagyasztott pizzák, zacskós levesek, húskonzervek, tartós tej... egy átlagos legénylakás vagy valami egyetemista társbérlet lesz, semmi extra. Mitől ijedtek meg ezek ennyire?
 
 Egyébként is, amióta a GRobynál dolgozol – na jó, nem olyan rég, mindössze egy hónapja – csupa kedves ügyfelet ismertél meg – gondolod. Elfoglalt családanyák, nehezen mozgó nyugdíjas nénik, sznob vállalkozók, de akármilyenek is, jattot mindig adnak. Ezt a fuvart még letudod, aztán irány haza. Áthajtasz a Lágymányosin és jobbra fordulsz. Mi is a cím? Valami történelmi cucc... ja igen, Nándorfejérvár köz.
 
