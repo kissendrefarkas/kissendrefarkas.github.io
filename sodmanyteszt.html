@@ -38,35 +38,26 @@ tw-story {
 /* --- Mobile layout with inventory support --- */
 @media (max-width: 768px) {
 
-  /* Force Twine navigation buttons into one horizontal row */
-  tw-sidebar tw-open-button,
-  tw-sidebar tw-folddown {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0.25em 0 0 !important;
-  }
-
-  /* Wrap arrows into a single row */
+  /* Put back/forward buttons on one horizontal row */
   tw-sidebar {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column;   /* keep sidebar vertical */
   }
 
-  /* First row = navigation buttons */
-  tw-sidebar > tw-open-button,
-  tw-sidebar > tw-folddown {
-    order: 1;
-  }
-
-  /* Everything else starts below the arrows */
-  tw-sidebar > :not(tw-open-button):not(tw-folddown) {
-    order: 2;
-  }
-
-  /* Optional: tighten arrow button size on mobile */
+  /* Create a horizontal row for Twine navigation buttons */
   tw-sidebar tw-open-button {
-    font-size: 0.9em;
+    display: inline-block !important;
+    margin: 0 0.25em 0 0 !important;
+    vertical-align: middle;
+  }
+
+  /* Prevent arrows from taking full width */
+  tw-sidebar tw-open-button[replay],
+  tw-sidebar tw-open-button[goto] {
+    display: inline-block !important;
+  }
+
+  /* Optional: tighten arrow spacing */
+  tw-sidebar tw-open-button {
     padding: 2px 6px;
     line-height: 1.2em;
   }
