@@ -41,7 +41,7 @@ tw-story {
   tw-story {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 12em;  /* more space for taller sidebar */
+    padding-top: 10em;  /* more space for taller sidebar */
   }
 
   tw-sidebar {
@@ -49,8 +49,10 @@ tw-story {
     top: 0;
     left: 0;
     width: 100%;
-    max-height: 3em;   /* taller sidebar */
+    max-height: 9em;   /* taller sidebar */
     margin-top: 0;
+    top: env(safe-area-inset-top, 0px) !important;
+    padding-top: 0.25em !important;
     padding: 0.5em 0.75em;
     display: flex;
     flex-direction: column;
