@@ -36,7 +36,6 @@ tw-story {
 }
 
 /* --- Mobile layout with inventory support --- */
-/* --- Mobile layout with inventory support --- */
 @media (max-width: 768px) {
 
   tw-story {
@@ -65,14 +64,15 @@ tw-story {
   }
 
   tw-sidebar > * {
-    font-size: 0.6em;
-    line-height: 1.3em;
+    font-size: 0.3em;
+    line-height: 1em;
   }
 
   tw-icon {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 0.4em;       /* spacing between arrows */
+    display: flex;
+    flex-direction: row; /* Aligns items horizontally */
+    justify-content: center; /* Centers them. Use flex-start or space-between if needed */
+    gap: 10px; /* Adds space between icons */
     font-size: 32px;
     padding-right: 0.25em;
   }
