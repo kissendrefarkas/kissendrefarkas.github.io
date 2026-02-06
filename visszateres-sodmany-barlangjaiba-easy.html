@@ -9,21 +9,85 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Visszatérés Sodmány Barlangjaiba (&quot;I&#39;m too young to die&quot; nehézség).</tw-noscript></noscript></tw-story>
-<tw-storydata name="Visszatérés Sodmány Barlangjaiba (&quot;I&#39;m too young to die&quot; nehézség)" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="9BACCB86-0B92-45B9-909D-2D9BD4BB24F3" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="Visszatérés Sodmány Barlangjaiba (&quot;I&#39;m too young to die&quot; nehézség)" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="9BACCB86-0B92-45B9-909D-2D9BD4BB24F3" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* --- Base desktop layout (your original intent, slightly refined) --- */
+tw-sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20%; /* padding-right of the tw-story element. */
-  max-height: 100%;
-  margin-top: 5%; /* padding-top of the tw-story element. */
-  padding: 0 0.5em 0.5em 0.5em;
+  width: 20%;
+  max-height: 100vh;
+  margin-top: 5%;
+  padding: 0.5em;
   text-align: right;
-  background-color: transparent;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  z-index: 10;
 }
+
 tw-icon {
   text-align: right;
   padding-right: 0.75em;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="250,25" size="100,100">&lt;img align=&quot;left&quot; src=&quot;https://sodipedia.sodika.dk/images/3/3f/Vissza000.jpg&quot; alt=&quot;Visszatérés Sodmány Barlangjaiba&quot; width=&quot;550&quot; height=&quot;790&quot; hspace=&quot;20&quot;&gt;Gondolataidba mélyedve baktatsz a szürke őszi délutánon. A csípős szél néha meglibbenti őszülő fürtjeidet a halántékodon, ezért fázósan összébb húzod a dzsekidet. Miután meguntad egy kavics rugdosását a járdán, riadva feltekintesz – hol van már megint ez az átkozott kölyök!? Harsányan a nevét kiáltod, amire gyermeki kacaj a válasz. Hál&#39;istennek, csak egy fa mögött bújócskázott az ütődött, nincsen semmi baj. Megnyugodva ballagsz tovább, előtted ide-oda futkosva kergeti a szélfútta, színes őszi faleveleket a kölyök.
+}
+
+/* Give story space so it doesn't hide under sidebar */
+tw-story {
+  padding-left: 22%;
+}
+
+/* --- Mobile layout with inventory support --- */
+@media (max-width: 768px) {
+
+  tw-story {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 11em;  /* more space for taller sidebar */
+  }    
+  
+  tw-story img {
+    max-width: 100% !important;  /* 🔥 never overflow screen */
+    width: 100% !important;      /* 🔥 stretch to container */
+    height: auto !important;     /* 🔥 keep aspect ratio */
+    display: block;
+  }
+
+  tw-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 11em;   /* taller sidebar */
+    margin-top: 0;
+    padding: 0.5em 0.75em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    overflow-y: auto;   /* 🔥 vertical scroll for long inventory */
+    overflow-x: hidden;
+    z-index: 100;
+  }
+
+  tw-sidebar > * {
+    font-size: 0.5em;
+    line-height: 1.0em;
+  }
+
+  tw-icon {
+    font-size: 26px;
+    padding-right: 0.25em;
+  }
+
+  /* Optional: visually separate inventory */
+  tw-sidebar b,
+  tw-sidebar strong {
+    display: inline-block;
+    margin-top: 0.3em;
+  }
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="250,25" size="100,100">&lt;img align=&quot;left&quot; src=&quot;https://sodipedia.sodika.dk/images/3/3f/Vissza000.jpg&quot; alt=&quot;Visszatérés Sodmány Barlangjaiba&quot; width=&quot;550&quot; height=&quot;790&quot; hspace=&quot;20&quot;&gt;Gondolataidba mélyedve baktatsz a szürke őszi délutánon. A csípős szél néha meglibbenti őszülő fürtjeidet a halántékodon, ezért fázósan összébb húzod a dzsekidet. Miután meguntad egy kavics rugdosását a járdán, riadva feltekintesz – hol van már megint ez az átkozott kölyök!? Harsányan a nevét kiáltod, amire gyermeki kacaj a válasz. Hál&#39;istennek, csak egy fa mögött bújócskázott az ütődött, nincsen semmi baj. Megnyugodva ballagsz tovább, előtted ide-oda futkosva kergeti a szélfútta, színes őszi faleveleket a kölyök.
 
 
 A kölyök!

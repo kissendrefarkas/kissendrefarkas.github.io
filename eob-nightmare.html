@@ -9,26 +9,92 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Eye Of The Börtöncell (&quot;Nightmare&quot; nehézség).</tw-noscript></noscript></tw-story>
-<tw-storydata name="Eye Of The Börtöncell (&quot;Nightmare&quot; nehézség)" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="501eb2f3-554e-4dd6-9718-c01467ae8b14" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="Eye Of The Börtöncell (&quot;Nightmare&quot; nehézség)" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="501eb2f3-554e-4dd6-9718-c01467ae8b14" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* --- Base desktop layout (your original intent, slightly refined) --- */
+tw-sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20%; /* padding-right of the tw-story element. */
-  max-height: 100%;
-  margin-top: 5%; /* padding-top of the tw-story element. */
-  padding: 0 0.5em 0.5em 0.5em;
+  width: 20%;
+  max-height: 100vh;
+  margin-top: 5%;
+  padding: 0.5em;
   text-align: right;
-  background-color: transparent;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  z-index: 10;
 }
+
 tw-icon {
-display: none;
+  display: none;
 }
+
+/* Give story space so it doesn't hide under sidebar */
+tw-story {
+  padding-left: 22%;
+}
+
 tw-link {
   color: #4169E1;
 }
 .visited {
    color: #4169E1;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="2275,75" size="100,100">&lt;img align=&quot;left&quot; src=&quot;eob/eyeofthebortoncell.jpg&quot; alt=&quot;Eye Of The Börtöncell&quot; hspace=&quot;20&quot;&gt;SoDI vagy, a pedofil képek birtoklásáért lecsukott internetes személyiség. Egy igazi hulladék vagy, az emberiség szemete, akit valamilyen bűnös hanyagságból még nem vertek agyon, mint egy rühös patkányt. Börtönbe kerültél, egy viszonylag nagy cellába, ahol nem csak egyedül vagy. Feladatod, hogy túléld (ha tudod) és kiszabadulj (ha tudsz).
+}
+
+/* --- Mobile layout with inventory support --- */
+@media (max-width: 768px) {
+
+  tw-story {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 11em;  /* more space for taller sidebar */
+  }    
+  
+  tw-story img {
+    max-width: 100% !important;  /* 🔥 never overflow screen */
+    width: 100% !important;      /* 🔥 stretch to container */
+    height: auto !important;     /* 🔥 keep aspect ratio */
+    display: block;
+  }
+   
+  tw-link {
+  color: #4169E1;
+  }
+.visited {
+   color: #4169E1;
+  }
+  
+  tw-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 11em;   /* taller sidebar */
+    margin-top: 0;
+    padding: 0.5em 0.75em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    overflow-y: auto;   /* 🔥 vertical scroll for long inventory */
+    overflow-x: hidden;
+    z-index: 100;
+  }
+
+  tw-sidebar > * {
+    font-size: 0.5em;
+    line-height: 1.0em;
+  }
+
+  tw-icon {
+  display: none;
+  }
+  
+  
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="2275,75" size="100,100">&lt;img align=&quot;left&quot; src=&quot;eob/eyeofthebortoncell.jpg&quot; alt=&quot;Eye Of The Börtöncell&quot; hspace=&quot;20&quot;&gt;SoDI vagy, a pedofil képek birtoklásáért lecsukott internetes személyiség. Egy igazi hulladék vagy, az emberiség szemete, akit valamilyen bűnös hanyagságból még nem vertek agyon, mint egy rühös patkányt. Börtönbe kerültél, egy viszonylag nagy cellába, ahol nem csak egyedül vagy. Feladatod, hogy túléld (ha tudod) és kiszabadulj (ha tudsz).
 
 Celládban továbbindulhatsz valamilyen irányba. Bár Kaffka Tibor, az ocsmány, bestiális kinézetű trash youtuber, aki valamilyen elmebetegség miatt Mercédesznek nevezi magát, megujjazott már néhányszor, konkrétan kesztyűbábnak használt, &lt;font color = &quot;saddlebrown&quot;&gt;**ánuszod egyelőre normál méretű**&lt;/font&gt; a börtönbe kerülésedkor. Azonban ha a celládban belebotlasz **Sittes Sanyiba** és barátaiba, ők változtathatnak ezen... **Ha Sittes Sanyiék annyira megdolgozták az ánuszodat, hogy egy traileres kamion is megfordulhat benne, &lt;font color = &quot;red&quot;&gt;életerő pontjaid&lt;/font&gt; dupla olyan gyorsan fogynak!**
 

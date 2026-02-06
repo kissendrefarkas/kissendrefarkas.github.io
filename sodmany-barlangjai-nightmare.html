@@ -9,20 +9,77 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Sodmány Barlangjai (&quot;Nightmare&quot; nehézség).</tw-noscript></noscript></tw-story>
-<tw-storydata name="Sodmány Barlangjai (&quot;Nightmare&quot; nehézség)" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="9d04df6b-cc8b-42d5-a34e-3efeb6dabc39" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="Sodmány Barlangjai (&quot;Nightmare&quot; nehézség)" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="9d04df6b-cc8b-42d5-a34e-3efeb6dabc39" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* --- Base desktop layout (your original intent, slightly refined) --- */
+tw-sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20%; /* padding-right of the tw-story element. */
-  max-height: 100%;
-  margin-top: 5%; /* padding-top of the tw-story element. */
-  padding: 0 0.5em 0.5em 0.5em;
+  width: 20%;
+  max-height: 100vh;
+  margin-top: 5%;
+  padding: 0.5em;
   text-align: right;
-  background-color: transparent;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  z-index: 10;
 }
+
 tw-icon {
-display: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="775,0" size="100,100">&lt;img align=&quot;left&quot; src=&quot;https://i.imgur.com/nht8InC.jpg&quot; alt=&quot;Sodmány Barlangjai&quot; hspace=&quot;20&quot;&gt;Kilépsz a bolt ajtaján és a céges autó felé veszed az irányt. Megigazítod kék simléderes sapkádat, előveszed a slusszkulcsot és bedobod a rendelést az anyósülésre. Igaz, hogy a műszak vége van és ez lesz ma az utolsó fuvarod, de mégis furcsa volt, ahogy az összes kollégádnak halaszthatatlan dolga akadt, amikor a főnök sápadt arccal bedobta ezt a dél-budai címet. Belenézel a szatyorba: fagyasztott pizzák, zacskós levesek, húskonzervek, tartós tej... egy átlagos legénylakás vagy valami egyetemista társbérlet lesz, semmi extra. Mitől ijedtek meg ezek ennyire?
+  display: none;
+}  
+
+/* Give story space so it doesn't hide under sidebar */
+tw-story {
+  padding-left: 22%;
+}
+
+/* --- Mobile layout with inventory support --- */
+@media (max-width: 768px) {
+
+  tw-story {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 11em;  /* more space for taller sidebar */
+  }    
+  
+  tw-story img {
+    max-width: 100% !important;  /* 🔥 never overflow screen */
+    width: 100% !important;      /* 🔥 stretch to container */
+    height: auto !important;     /* 🔥 keep aspect ratio */
+    display: block;
+  }
+
+  tw-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 11em;   /* taller sidebar */
+    margin-top: 0;
+    padding: 0.5em 0.75em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    overflow-y: auto;   /* 🔥 vertical scroll for long inventory */
+    overflow-x: hidden;
+    z-index: 100;
+  }
+
+  tw-sidebar > * {
+    font-size: 0.5em;
+    line-height: 1.0em;
+  }
+
+  tw-icon {
+  display: none;
+  }
+  
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Háttértörténet" tags="" position="775,0" size="100,100">&lt;img align=&quot;left&quot; src=&quot;https://i.imgur.com/nht8InC.jpg&quot; alt=&quot;Sodmány Barlangjai&quot; hspace=&quot;20&quot;&gt;Kilépsz a bolt ajtaján és a céges autó felé veszed az irányt. Megigazítod kék simléderes sapkádat, előveszed a slusszkulcsot és bedobod a rendelést az anyósülésre. Igaz, hogy a műszak vége van és ez lesz ma az utolsó fuvarod, de mégis furcsa volt, ahogy az összes kollégádnak halaszthatatlan dolga akadt, amikor a főnök sápadt arccal bedobta ezt a dél-budai címet. Belenézel a szatyorba: fagyasztott pizzák, zacskós levesek, húskonzervek, tartós tej... egy átlagos legénylakás vagy valami egyetemista társbérlet lesz, semmi extra. Mitől ijedtek meg ezek ennyire?
 
 Egyébként is, amióta a GRobynál dolgozol – na jó, nem olyan rég, mindössze egy hónapja – csupa kedves ügyfelet ismertél meg – gondolod. Elfoglalt családanyák, nehezen mozgó nyugdíjas nénik, sznob vállalkozók, de akármilyenek is, jattot mindig adnak. Ezt a fuvart még letudod, aztán irány haza. Áthajtasz a Lágymányosin és jobbra fordulsz. Mi is a cím? Valami történelmi cucc... ja igen, Nándorfejérvár köz.
 
